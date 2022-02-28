@@ -26,8 +26,9 @@ public class ListModel {
 	@Size(min=4, max=25)
 	private String title;
 	
+	@NotNull
 	@ManyToOne
-	@JsonIgnoreProperties("tb_users")
+	@JsonIgnoreProperties("list")
 	private User user;
 	
 	@OneToMany(mappedBy="list")

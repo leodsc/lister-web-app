@@ -32,11 +32,11 @@ public class User {
 	private String email;
 	
 	@NotNull
-	@Size(min=4, max=512)
+	@Size(min=8, max=128)
 	private String password;
 	
 	@OneToMany(mappedBy="user", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties("tb_list")
+	@JsonIgnoreProperties("user")
 	private List<ListModel> list;
 
 	public long getId() {
