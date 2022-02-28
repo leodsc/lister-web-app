@@ -6,3 +6,11 @@
   border: none;
   outline: none;
 }
+
+:root {
+  font-size: 16px;
+  --green: #44bba4;
+  --black: #333;
+  --gray: #eee;
+  --blue: #007bff;
+}

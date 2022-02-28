@@ -6,13 +6,13 @@ import Footer from './components/Footer';
 
 import './App.css';
 
-class App extends React.Component() {
-  render() {
+function App() {
+  return (
     <div className="App">
       <Header />
       <Footer />
     </div>
-  }
+  )
 }
 
 export default App;

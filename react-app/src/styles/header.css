@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+body {
+  background-color: var(--gray);
+}
+
+.banner {
+  width: 100vw;
+  height: 100px;
+  box-shadow: 0px -1px 10px 1px #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner--hamburguer-btn {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hamburguer-btn-line {
+  height: 7px;
+  border-radius: 10px;
+  background: var(--green);
+  transition: all 250ms;
+}
+
+.hamburguer-btn-line:nth-child(2) {
+  width: 45%;
+}
+
+.hamburguer-btn-line:nth-child(3),
+.hamburguer-btn-line:nth-child(1) {
+  width: 60%;
+}
+
+.banner--title {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-left: 80px;
+  position: relative;
+  right: 70px;
+}
+
+.banner--navigation,
+.banner--navigation__active {
+  position: absolute;
+  transition: all 500ms;
+  z-index: -1;
+}
+
+.banner--navigation {
+  transform: translateY(-100vh);
+}
+
+.banner--navigation__active {
+  transform: translateY(200px);
+}
+
+.banner--links-ctn {
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+  align-items: center;
+  row-gap: 0.33fr;
+  column-gap: 2rem;
+  width: auto;
+  height: 200px;
+}
+
+.banner--link {
+  list-style: none;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* change states */
+
+.hamburguer-btn-line__active-1 {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.hamburguer-btn-line__active-2 {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+.hamburguer-btn-line__hide {
+  display: none;
+}
