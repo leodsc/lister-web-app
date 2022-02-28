@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { ReactComponent as LoginSVG } from "../assets/Lock.svg";
 import { ReactComponent as SignupSVG } from "../assets/Add-User.svg";
 import { ReactComponent as FaqSVG } from "../assets/Question-Mark.svg";
@@ -43,12 +44,18 @@ function Navigation(props) {
   return (
     <nav class={`banner--navigation ${navClass}`}>
       <ul class="banner--links-ctn">
-        <LoginSVG />
-        <li class="banner--link">Entrar</li>
-        <SignupSVG />
-        <li class="banner--link">Cadastrar</li>
-        <FaqSVG />
-        <li class="banner--link">FAQ</li>
+        <Link className="banner--link" to="/login">
+          <LoginSVG />
+          <li class="banner--list-link">Entrar</li>
+        </Link>
+        <Link className="banner--link" to="/signup">
+          <SignupSVG />
+          <li class="banner--list-link">Cadastrar</li>
+        </Link>
+        <Link className="banner--link" to="/faq">
+          <FaqSVG />
+          <li class="banner--list-link">FAQ</li>
+        </Link>
       </ul>
     </nav>
   )

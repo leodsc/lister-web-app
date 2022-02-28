@@ -5,6 +5,9 @@
   background-color: none;
   border: none;
   outline: none;
+  text-decoration: none;
+  color: #333;
+  font-family: "Montserrat";
 }
 
 :root {
@@ -13,4 +16,8 @@
   --black: #333;
   --gray: #eee;
   --blue: #007bff;
+}
+
+button {
+  cursor: pointer;
 }

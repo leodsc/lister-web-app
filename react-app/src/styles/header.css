@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap");
 
 body {
   background-color: var(--gray);
@@ -11,6 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .banner--hamburguer-btn {
@@ -52,7 +53,8 @@ body {
 .banner--navigation__active {
   position: absolute;
   transition: all 500ms;
-  z-index: -1;
+  background: var(--gray);
+  width: 100%;
 }
 
 .banner--navigation {
@@ -60,23 +62,27 @@ body {
 }
 
 .banner--navigation__active {
-  transform: translateY(200px);
+  transform: translateY(150px);
 }
 
 .banner--links-ctn {
-  display: grid;
-  grid-template-columns: 0.2fr 0.8fr;
-  align-items: center;
-  row-gap: 0.33fr;
-  column-gap: 2rem;
+  display: flex;
+  flex-direction: column;
   width: auto;
-  height: 200px;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 .banner--link {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.banner--list-link {
   list-style: none;
   font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
 }
 
 /* change states */
