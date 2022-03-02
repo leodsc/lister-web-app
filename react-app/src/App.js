@@ -12,6 +12,7 @@ import HeaderFooter from './components/HeaderFooter';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Faq from './pages/Faq';
+import Home from './pages/Home';
 
 import './App.css';
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<HeaderFooter />} >
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
+            <Route path="/home" element={<Home />} />
             <Route path="faq" element={<Faq />} />
           </Route>
         </Routes>
