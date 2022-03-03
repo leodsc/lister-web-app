@@ -1,3 +1,7 @@
+.home-page {
+  height: 100%;
+}
+
 .home-page--show-tasks-ctn {
   width: 85%;
   display: flex;
@@ -36,5 +40,110 @@
 }
 
 .home-page--card {
-  background-color: red;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-progression {
+  border-radius: 100%;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.cards-ctn {
+  max-width: 90%;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.cards-ctn__grid {
+  display: grid;
+  grid-template-columns: 0.5fr 0.25fr;
+  gap: 1rem;
+}
+
+.cards-ctn__flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.home-page--card {
+  padding: 0.5rem;
+}
+
+.card-open {
+  background-color: white;
+  flex: 1;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  max-width: 500px;
+  height: auto;
+  overflow-y: auto;
+}
+
+svg {
+  fill: var(--green);
+}
+
+.card-open--info {
+  border-bottom: 2px solid black;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.task-btn {
+  width: auto;
+  align-self: center;
+}
+
+.card-percentage {
+  font-size: 1.25rem;
+}
+
+.card-open--close {
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.card-open--tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-open--task-ctn {
+  font-size: 1.25em;
+  padding: 0.5rem 2rem;
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+  align-items: center;
+  word-break: break-all;
+  background-color: var(--gray);
+  gap: 1rem;
+  cursor: pointer;
+  padding-right: 2rem;
+}
+
+.task {
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 500px) {
+  .card-open--tasks {
+    padding: 0 2rem;
+  }
 }
