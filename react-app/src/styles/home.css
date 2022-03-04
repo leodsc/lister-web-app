@@ -90,6 +90,8 @@
   max-width: 500px;
   height: auto;
   overflow-y: auto;
+  align-items: center;
+  position: relative;
 }
 
 svg {
@@ -119,10 +121,29 @@ svg {
   cursor: pointer;
 }
 
+.add-new-task-ctn {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
 .card-open--tasks {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.add-task-btn {
+  cursor: pointer;
+  position: relative;
+  top: 18px;
+}
+
+.card-open--add-task {
+  width: 80%;
+  height: 48px;
+  font-size: 1.25rem;
+  position: relative;
 }
 
 .card-open--task-ctn {

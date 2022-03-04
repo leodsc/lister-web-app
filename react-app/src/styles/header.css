@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap");
 
 body {
-  background-color: var(--gray);
+  background-color: var(--bg-light);
 }
 
 .banner {
@@ -53,7 +53,7 @@ body {
 .banner--navigation__active {
   position: absolute;
   transition: all 500ms;
-  background: var(--gray);
+  background: var(--bg-light);
   width: 100%;
 }
 

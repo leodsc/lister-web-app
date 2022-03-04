@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ReactComponent as CloseSVG } from '../assets/Close.svg';
 import { ReactComponent as CheckmarkSVG } from '../assets/checkmark.svg';
+import { ReactComponent as NewTaskSVG } from '../assets/confirm.svg';
+
 
 import cards from '../test/cards.js';
 
@@ -34,7 +36,7 @@ function Home() {
           return <Card content={card} setCurrentCardOpen={setCurrentCardOpen} />
         })}
       </div>
-      {currentCardOpen !== null && <CardOpen setCurrentCardOpen={setCurrentCardOpen} card={currentCardOpen} />}
+      {currentCardOpen !== null && <CardOpen currentCardOpen={currentCardOpen} setCurrentCardOpen={setCurrentCardOpen} card={currentCardOpen} />}
     </main>
   )
 }
@@ -73,12 +75,24 @@ function Card(props) {
 }
 
 function CardOpen(props) {
-  const { card, setCurrentCardOpen } = props;
+  const { card, currentCardOpen, setCurrentCardOpen } = props;
+  const [newTask, setNewTask] = useState("");
 
   const updateCard = (task) => {
     task.done = !task.done;
     task.done ? card["done"]++ : card["done"]--;
     console.log(card);
+  }
+
+  const addNewTask = () => {
+    currentCardOpen.tasks.push(
+      {
+        "name": newTask,
+        "id": 5,
+        "done": false
+      }
+    );
+    setNewTask("");
   }
 
   return (
@@ -90,7 +104,16 @@ function CardOpen(props) {
           setCurrentCardOpen(null);
         }} />
       </div>
-      <button className='btn-confirm task-btn'>+ Tarefa</button>
+      <label>
+        <input value={newTask} onChange={(e) => {
+          setNewTask(e.target.value);
+        }} placeholder="Digite nova tarefa..."
+          className="input__style-1 card-open--add-task" />
+        {<button
+          className='add-task-btn' onClick={addNewTask} >
+          <NewTaskSVG />
+        </button>}
+      </label>
       <div className='card-open--tasks'>
         {card.tasks.map(task => {
           return (
