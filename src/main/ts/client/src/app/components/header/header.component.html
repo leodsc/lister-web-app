@@ -8,6 +8,21 @@
         <div *ngIf="!navOpen" class="hamburguer-btn--line"></div>
         <div class="hamburguer-btn--line"></div>
     </button>
-    <nav *ngIf="navOpen" class="app-menu">hello world</nav>
+    <nav *ngIf="navOpen" class="app-menu">
+        <ul class="app--links-ctn">
+            <li class="app--link-ctn">
+                <img src="assets/Lock.svg" alt="" class="link--img">
+                <a href="" class="app-menu--link">Login</a>
+            </li>
+            <li class="app--link-ctn">
+                <img src="assets/Add User Male.svg" alt="" class="link--img">
+                <a href="" class="app-menu--link">Cadastrar</a>
+            </li>
+            <li class="app--link-ctn">
+                <img src="assets/Question Mark.svg" alt="" class="link--img">
+                <a href="" class="app-menu--link">FAQ</a>
+            </li>
+        </ul>
+    </nav>
     <h1 class="app-title">Lister</h1>
 </header>

@@ -50,3 +50,39 @@
     font-weight: 400;
     letter-spacing: 2px;
 }
+
+.app-menu {
+    position: absolute;
+    top: 5rem;
+    padding: 1rem;
+    animation-name: move-nav;
+    animation-duration: 500ms;
+}
+
+.app--links-ctn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.app--link-ctn {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.app-menu--link {
+    font-size: var(--normal);
+    color: #222;
+}
+
+@keyframes move-nav {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 5rem;
+    }
+}

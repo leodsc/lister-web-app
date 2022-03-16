@@ -21,9 +21,10 @@ export class HeaderComponent implements OnInit {
 
   hamburguerBtnAnimation() {
     const lines: any = this.hamburguerBtn.nativeElement.children;
+    this.navOpen ? lines[2].style.width = "100%" : lines[1].style.width = "50%";
+
     [...lines].forEach((line, index) => {
-      line.style.width = "100%";
-      index == 0 ? line.classList.toggle("rotate-clockwise") : line.classList.toggle("rotate-anticlockwise")
+      index == 0 ? line.classList.toggle("rotate-clockwise") : line.classList.toggle("rotate-anticlockwise");
     })
   }
 }
