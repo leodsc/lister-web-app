@@ -29,3 +29,14 @@
 body {
     background-color: var(--background);
 }
+
+button {
+    cursor: pointer;
+}
+
+.info-btn {
+    background-color: var(--light-blue);
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+}

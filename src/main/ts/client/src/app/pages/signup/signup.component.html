@@ -1,20 +1,6 @@
 <app-header></app-header>
-<main class="cadastrar">
-    <h2 class="cadastrar--title">Nova Conta</h2>
+<main class="cadastrar-page">
+    <h2 class="cadastrar-page--title">Nova Conta</h2>
     <img src="assets/cadastro.svg" alt="">
-    <form action="/api/users/signup" method="post">
-        <label for="" class="cadastrar--form-label">
-            <input type="text" class="cadastrar--form-input">
-        </label>
-        <label for="" class="cadastrar--form-label">
-            <input type="email" class="cadastrar--form-input">
-        </label>
-        <label for="" class="cadastrar--form-label">
-            <input type="password" class="cadastrar--form-input">
-        </label>
-        <label for="" class="cadastrar--form-label">
-            <input type="password" class="cadastrar--form-input">
-        </label>
-        <button type="submit">Cadastrar</button>
-    </form>
+    <app-form [model]="form"></app-form>
 </main>

@@ -1,0 +1,6 @@
+<form class="page-form" action="{{ model.action }}" method="{{ model.method }}">
+    <label class="page-form--label" *ngFor="let label of model.labels" for="{{ label.for }}">
+        <input class="page-form--input" placeholder="{{ label.placeholder }}" name="{{ label.name }}" type="{{ label.type }}">
+    </label>
+    <button class="{{ model.button.class }}" type="submit">{{ model.button.text }}</button>
+</form>
