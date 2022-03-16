@@ -1,0 +1,13 @@
+<header class="app-banner">
+    <button 
+    #hamburguerBtn
+    class="app-hamburguer-btn"
+    (click)="setNav()"
+    >
+        <div class="hamburguer-btn--line"></div>
+        <div *ngIf="!navOpen" class="hamburguer-btn--line"></div>
+        <div class="hamburguer-btn--line"></div>
+    </button>
+    <nav *ngIf="navOpen" class="app-menu">hello world</nav>
+    <h1 class="app-title">Lister</h1>
+</header>
